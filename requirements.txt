@@ -25,3 +25,4 @@ einops
 configargparse
 
 lpips
+imageio-ffmpeg
