@@ -10,7 +10,6 @@ tqdm
 matplotlib
 PyMCubes
 rich
-pysdf
 dearpygui
 packaging
 scipy
@@ -26,4 +25,3 @@ einops
 configargparse
 
 lpips
-torch-scatter
