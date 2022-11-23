@@ -4,7 +4,7 @@ This repository contains a PyTorch re-implementation of the paper: [Real-time Ne
 
 Colab notebook demonstration: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZsC6J-eeaOFP43Oi8DuY_aMSNUlM0A_c?usp=sharing)
 
-### [Project Page](https://ashawkey.github.io/radnerf/) | [Arxiv]() | [Data](https://drive.google.com/drive/folders/14LfowIkNdjRAD-0ezJ3JENWwY9_ytcXR?usp=sharing)
+### [Project Page](https://ashawkey.github.io/radnerf/) | [Arxiv](https://arxiv.org/abs/2211.12368) | [Data](https://drive.google.com/drive/folders/14LfowIkNdjRAD-0ezJ3JENWwY9_ytcXR?usp=sharing)
 
 A GUI for easy visualization:
 
@@ -114,7 +114,7 @@ cd ../..
 
 ### Quick Start
 
-We provide some pretrained models [here](TODO) for quick testing on arbitrary audio.
+We provide some pretrained models [here](https://drive.google.com/drive/folders/14LfowIkNdjRAD-0ezJ3JENWwY9_ytcXR?usp=sharing) for quick testing on arbitrary audio.
 
 * Download a pretrained model.
     For example, we download `obama_eo.pth` to `./pretrained/obama_eo.pth`
@@ -195,4 +195,10 @@ check the `scripts` directory for more provided examples.
 # Citation
 
 ```
+@article{tang2022radnerf,
+  title={Real-time Neural Radiance Talking Portrait Synthesis via Audio-spatial Decomposition},
+  author={Tang, Jiaxiang and Wang, Kaisiyuan and Zhou, Hang and Chen, Xiaokang and He, Dongliang and Hu, Tianshu and Liu, Jingtuo and Zeng, Gang and Wang, Jingdong},
+  journal={arXiv preprint arXiv:2211.12368},
+  year={2022}
+}
 ```
