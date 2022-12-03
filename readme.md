@@ -164,7 +164,7 @@ python main.py data/obama/ --workspace trial_obama/ -O --iters 200000
 python main.py data/obama/ --workspace trial_obama/ -O --iters 250000 --finetune_lips
 
 # train (torso)
-# <head>.pth should be the lastest checkpoint in trial_obama
+# <head>.pth should be the latest checkpoint in trial_obama
 python main.py data/obama/ --workspace trial_obama_torso/ -O --torso --head_ckpt <head>.pth --iters 200000
 
 # test on the test split
