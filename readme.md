@@ -160,7 +160,7 @@ First time running will take some time to compile the CUDA extensions.
 # `--preload 2`: load to GPU, requires ~24G GPU memory (fast)
 python main.py data/obama/ --workspace trial_obama/ -O --iters 200000
 
-# train (head, finetune lips)
+# train (finetune lips for another 50000 steps, run after the above command!)
 python main.py data/obama/ --workspace trial_obama/ -O --iters 250000 --finetune_lips
 
 # train (torso)
