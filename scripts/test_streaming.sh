@@ -6,4 +6,4 @@ python test.py \
     --workspace trial_test \
     --bg_img data/obama/bc.jpg \
     -l 10 -m 10 -r 10 \
-    -O --torso --data_range 0 100 --gui --asr
+    -O --torso --data_range 0 100 --preload 2 --gui --asr
