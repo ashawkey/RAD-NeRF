@@ -130,8 +130,8 @@ class NeRFNetwork(NeRFRenderer):
             self.audio_att_net = AudioAttNet(self.audio_dim)
 
         # ambient network
-        self.encoder, self.in_dim = get_encoder('hashgrid', input_dim=3, num_levels=16, level_dim=2, base_resolution=16, log2_hashmap_size=16, desired_resolution=2048 * self.bound, interpolation='smoothstep')
-        self.encoder_ambient, self.in_dim_ambient = get_encoder('hashgrid', input_dim=ambient_dim, num_levels=16, level_dim=2, base_resolution=16, log2_hashmap_size=16, desired_resolution=2048, interpolation='smoothstep')
+        self.encoder, self.in_dim = get_encoder('tiledgrid', input_dim=3, num_levels=16, level_dim=2, base_resolution=16, log2_hashmap_size=16, desired_resolution=2048 * self.bound, interpolation='linear')
+        self.encoder_ambient, self.in_dim_ambient = get_encoder('tiledgrid', input_dim=ambient_dim, num_levels=16, level_dim=2, base_resolution=16, log2_hashmap_size=16, desired_resolution=2048, interpolation='linear')
 
         self.num_layers_ambient = num_layers_ambient
         self.hidden_dim_ambient = hidden_dim_ambient
@@ -162,7 +162,7 @@ class NeRFNetwork(NeRFRenderer):
             self.torso_deform_net = MLP(self.torso_deform_in_dim + self.pose_in_dim + self.individual_dim_torso, 2, 64, 3)
 
             # torso color network
-            self.torso_encoder, self.torso_in_dim = get_encoder('hashgrid', input_dim=2, num_levels=16, level_dim=2, base_resolution=16, log2_hashmap_size=16, desired_resolution=2048, interpolation='smoothstep')
+            self.torso_encoder, self.torso_in_dim = get_encoder('tiledgrid', input_dim=2, num_levels=16, level_dim=2, base_resolution=16, log2_hashmap_size=16, desired_resolution=2048, interpolation='linear')
             # self.torso_net = MLP(self.torso_in_dim + self.torso_deform_in_dim + self.pose_in_dim + self.individual_dim_torso + self.audio_dim, 4, 64, 3)
             self.torso_net = MLP(self.torso_in_dim + self.torso_deform_in_dim + self.pose_in_dim + self.individual_dim_torso, 4, 32, 3)
 
