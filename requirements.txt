@@ -26,3 +26,4 @@ configargparse
 
 lpips
 imageio-ffmpeg
+scikit-learn
